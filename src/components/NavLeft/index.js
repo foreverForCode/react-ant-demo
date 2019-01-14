@@ -4,6 +4,8 @@ import './index.less';
 
 import { Menu, Icon } from 'antd';
 
+import {Link} from 'react-router-dom';
+
 import menuConfig from './../../config/menuConfig';
 
 const SubMenu = Menu.SubMenu;

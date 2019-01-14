@@ -9,7 +9,7 @@ import Router from './pages/route_demo/router/router';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-    <Router/>,
+    <Admin />,
     document.getElementById('root')
 );
 // ReactDOM.render(<Router />, document.getElementById('root'));

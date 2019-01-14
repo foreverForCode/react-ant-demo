@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import {HashRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 
 import Home from './Home';
 
@@ -9,7 +9,7 @@ const Main = (props) => {
     return(
         <div>
             this is main
-            <Link to='/home/a'>子路由</Link>
+            <Link to='/home/a/456'>子路由</Link>
 
             <hr/>
 
@@ -18,10 +18,12 @@ const Main = (props) => {
     )
 };
 
-const About = ()  => {
+const About = (prop)  => {
    return(
        <div>
            this is about
+           <hr/>
+           {prop.match.params.id}
        </div>
    )
 }
@@ -35,6 +37,16 @@ const Topic = () => {
     )
 }
 
+const NotMatch = () => {
+
+    return (
+
+        <div>
+
+            404
+        </div>
+    )
+}
 export default class IRouter extends React.Component{
 
 
@@ -45,13 +57,17 @@ export default class IRouter extends React.Component{
 
             <Router>
                 <Home>
+                    <Switch>
                     <Route  path='/home' render={() =>
                         <Main>
-                            <Route  path='/home/a' component={About}></Route>
+                            <Route  path='/home/a/:id' component={About}></Route>
                         </Main>
                     }></Route>
                     <Route  path='/about' component={About}></Route>
                     <Route  path='/topic' component={Topic}></Route>
+                    <Route component={NotMatch}></Route>
+                    </Switch>
+
                 </Home>
 
             </Router>
