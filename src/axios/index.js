@@ -9,6 +9,7 @@ export default class Axios{
 
             Jsonp(option.url,{param : 'callback'}, function (err, response) {
 
+                
                 if(response.status == 'success'){
 
                     resolve(response);

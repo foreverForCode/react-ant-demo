@@ -1,14 +1,16 @@
 
 import React from 'react';
-
+import {Card, Button} from 'antd';
 export default class Buttons extends React.Component{
 
     render() {
 
         return(
-
             <div>
-                this is buttons page
+
+                <Card title="基础按钮">
+                    <Button type="primary">Imook</Button>
+                </Card>
             </div>
         )
     }
