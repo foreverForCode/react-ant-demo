@@ -59,7 +59,7 @@ export default class Modals extends React.Component{
                     visible={this.state.modal1}
                     onCancel={() => {
                         this.setState({
-                            modal1 : false
+                              : false
                         })
                     }}
                 >
@@ -77,7 +77,7 @@ export default class Modals extends React.Component{
                     }}
                 >
                     <p>hello world</p>
-                </Modal>
+                </Modal> 
                 <Modal
                     title="hello"
                     visible={this.state.modal3}
